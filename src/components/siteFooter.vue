@@ -54,11 +54,38 @@
                     </ul>
                 </div>
             </section>
+        </div>
             <!-- banner di account  -->
             <section class="account">
-
+                <div class="account_container">
+                     <div class="sing_up ">
+                    <a href="#">
+                        SING-UP NOW!
+                    </a>
+                </div>
+                <div class="follow_us">
+                    <div class="follow_text">
+                        FOLLOW US
+                    </div>
+                    <div>
+                        <img src="../assets/footer-facebook.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/footer-twitter.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/footer-youtube.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/footer-pinterest.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/footer-periscope.png" alt="">
+                    </div>
+                </div>
+                </div>
+               
             </section>
-        </div>
     </div>
 </template>
 
@@ -68,6 +95,7 @@
     // contenitore generale 
     .general_footer{
         background-image: url(../assets/footer-bg.jpg);
+        background-size: cover;
     }
     .container_footer{
         display: flex;
@@ -92,6 +120,39 @@
             font-size: .8rem;
             font-weight: 300;
             color: #959595;
+            line-height: 1.4rem;
         }
     }
+    .account{
+        background-color:#303030 ;
+        height: 5rem;
+            }
+        .account_container{
+            width: $generalWidth;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            // sing-up
+            a{
+                text-decoration: none;
+                color: white;
+                padding:.7rem .5rem;
+                border: 1px solid $brandColor;
+                font-size: .8rem;
+            }
+            .follow_us{
+                display: flex;
+                align-items: center;
+                // icone
+                div{
+                    padding-left: 1rem;
+                }
+                // testo 
+                .follow_text{
+                    color: $brandColor;
+                }
+            }
+        }
 </style>
