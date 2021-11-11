@@ -10,7 +10,7 @@
     </main>
     <!-- footer -->
     <footer id="site_footer">
-
+      <siteFooter/>
     </footer>
   </div>
 </template>
@@ -19,12 +19,14 @@
 // imporazione
 import siteHeader from './components/siteHeader.vue'
 import siteMain from './components/siteMain.vue'
+import siteFooter from './components/siteFooter.vue'
 // lista compèonenti 
 export default {
   name: 'App',
   components: {
     siteHeader,
-    siteMain
+    siteMain,
+    siteFooter
   }
 }
 </script>

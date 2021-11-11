@@ -1,6 +1,6 @@
 <template>
-    <div class="general">
-        <section class="container">
+    <div class="general_blue">
+        <section class="container_blue">
             <div href="#">
                 <img src="../assets/buy-comics-digital-comics.png" alt="">
                 <span>DIGITAL COMICS</span>
@@ -29,13 +29,17 @@
 // importazione variabili
     @import '/variabili.scss';
     // contenitore principale
-    .general{
+    .general_blue{
         background-color: $brandColor;
         // contenitore
-        .container{
+        .container_blue{
             width: $generalWidth;
+            height: 8rem;
             display: flex;
-            padding: 3rem 0;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            padding: 0 1.5rem;
             // oggetti link 
             div{
                 color: white;

@@ -38,6 +38,9 @@ export default {
  .black_ban{
     background-color: black;
     width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
      }
     
 </style>

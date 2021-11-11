@@ -34,13 +34,13 @@
         padding:1rem;
         // dimensione imgg 
         img{
-            width: 5rem;
+            width: 4rem;
         }
         // modifca oggetti di selezione 
         a{
             text-decoration: none;
             color: black;
-            padding:2.8rem 1rem;
+            padding:2.3rem 1rem;
             font-weight: 700;
             font-size: .8rem;
             // effettistica oggetti 
