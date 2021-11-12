@@ -1,33 +1,45 @@
 <template>
-    <div>
-        <section>
-            <div class="image_container">
-                <img src="../assets/jumbotron.jpg" alt="">
-            </div>
-            <!-- banner nero  -->
-            <div class="black_ban">
-                <div class="container">
-                <series/>
-                </div>
-            </div>
-            <!-- banner blue  -->
-            <div class="blue_ban">
-                <blueBan/>
-            </div>
-        </section>
-    </div>
+  <div>
+    <section>
+      <div class="image_container">
+        <img src="../assets/jumbotron.jpg" alt="" />
+      </div>
+      <!-- banner nero  -->
+      <div class="black_ban">
+        <div class="container">
+          <div class="current_series">
+            <h3>CURRENT SERIES</h3>
+          </div>
+          <series
+            class="oggetto"
+            v-for="oggetto in oggetti"
+            :key="oggetto.titolo"
+            :image="oggetto.thumb"
+            :titolo="oggetto.series"
+          />
+          <div class="load_more">
+            <h6>LOAD MORE</h6>
+          </div>
+        </div>
+      </div>
+      <!-- banner blue  -->
+      <div class="blue_ban">
+        <blueBan />
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-// importare ban blu 
-import blueBan from './blueBan.vue'
-import series from './series.vue'
+// importare ban blu
+import blueBan from "./blueBan.vue";
+import series from "./series.vue";
 export default {
-    components: {
-        blueBan,
-        series
-    },
-      data() {
+  components: {
+    blueBan,
+    series,
+  },
+  data() {
     return {
       oggetti: [
         {
@@ -117,28 +129,48 @@ export default {
       ],
     };
   },
-}
+};
 </script>
 
 <style lang="scss">
-// importazione variabili 
-@import '/variabili.scss';
-.image_container{
-    height: 19rem;
-    overflow: hidden;
-    img{
-        width: 100%;
-    }
-}
-.container{
-    width: $generalWidth;
-    color: white;
-    
-};
-    // contenitore nero 
- .black_ban{
-    background-color: black;
+// importazione variabili
+@import "/variabili.scss";
+.image_container {
+  height: 19rem;
+  overflow: hidden;
+  position: relative;
+  img {
     width: 100%;
-     }
-    
+  }
+}
+.container {
+  width: $generalWidth;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  .oggetto {
+    width: calc((100% / 12) * 2);
+  }
+}
+// contenitore nero
+.black_ban {
+  background-color: black;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+  .current_series {
+    position: absolute;
+    color: white;
+    background-color: $brandColor;
+    padding: 0.5rem 1rem;
+    top: -1rem;
+  }
+  .load_more{
+     background-color: $brandColor;
+     margin: auto;
+     padding: .5rem 3rem;
+     margin-top: 1rem;
+  }
+}
 </style>
