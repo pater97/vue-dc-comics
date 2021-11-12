@@ -2,15 +2,15 @@
   <div id="app">
     <!-- header -->
     <header id="site_header">
-      <siteHeader/>
+      <siteHeader />
     </header>
     <!-- main -->
     <main id="main_site">
-      <siteMain/>
+      <siteMain />
     </main>
     <!-- footer -->
     <footer id="site_footer">
-      <siteFooter/>
+      <siteFooter />
     </footer>
   </div>
 </template>
@@ -18,25 +18,25 @@
 
 <script>
 // imporazione
-import siteHeader from './components/siteHeader.vue'
-import siteMain from './components/siteMain.vue'
-import siteFooter from './components/siteFooter.vue'
-// lista compèonenti 
+import siteHeader from "./components/siteHeader.vue";
+import siteMain from "./components/siteMain.vue";
+import siteFooter from "./components/siteFooter.vue";
+// lista compèonenti
 export default {
-  name: 'App',
+  name: "App",
   components: {
     siteHeader,
     siteMain,
-    siteFooter
+    siteFooter,
   }
-}
+};
 </script>
 
 <style lang="scss">
-  // impostazioni di reset
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+// impostazioni di reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 </style>

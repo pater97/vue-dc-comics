@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- container principale -->
-        <section class="container">
+        <section class="container_header">
             <!-- contenitore logo -->
             <div class="logo">
                 <img src="../assets/dc-logo.png" alt="">
@@ -25,7 +25,7 @@
 
 <style lang="scss">
         @import '/variabili.scss';
-    .container{
+    .container_header{
         width: $generalWidth; 
         margin: auto;
         display: flex;
